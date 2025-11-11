@@ -62,21 +62,15 @@ Java 17, Spring Boot 3.1, Spring Cloud
 
 ### Diagrams
 
-#### Sequence Diagram (Reservation Creation)
 
-@startuml
-actor User
-participant UserService
-participant ReservationService
-participant InventoryService
+![Car Rental System - Requirements](/documents/ADR/images/Requirements.png)
 
-User -> UserService : Authenticate
-UserService -> ReservationService : Create Reservation Request
-ReservationService -> InventoryService : Check Car Availability
-InventoryService -> ReservationService : Availability Response
-ReservationService -> UserService : Reservation Confirmation
-UserService -> User : Confirmation
-@enduml
+![Class Diagram](/documents/ADR/images/UML-Class.jpg)
+
+![Sequence Diagram](/documents/ADR/images/UML-Sequence.jpg)
+
+![ER Diagram](/documents/ADR/images/ER.jpg)
+
 
 ## Consequences
 
