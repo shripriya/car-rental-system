@@ -3,9 +3,8 @@ package com.carrental.reservation.controller;
 import com.carrental.reservation.domain.Reservation;
 import com.carrental.reservation.service.ReservationCommandService;
 import com.carrental.reservation.service.ReservationQueryService;
-import com.carrental.reservation.service.PricingStrategy;
-import com.carrental.reservation.service.DefaultPricingStrategy;
-import com.carrental.common.domain.CarType;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
@@ -14,8 +13,8 @@ import java.util.*;
 public class ReservationController {
     private final ReservationCommandService commandService;
     private final ReservationQueryService queryService;
-    private final PricingStrategy pricingStrategy = new DefaultPricingStrategy();
 
+    @Autowired
     public ReservationController(ReservationCommandService commandService, ReservationQueryService queryService) {
         this.commandService = commandService;
         this.queryService = queryService;
@@ -33,10 +32,8 @@ public class ReservationController {
 
     @PostMapping
     public Reservation createReservation(@RequestBody Reservation reservation) {
-        // Calculate price using strategy and user preferred car type
-        int days = (int) java.time.Duration.between(reservation.getStartDate(), reservation.getEndDate()).toDays();
-        CarType carType = reservation.getCarType();
-        double price = pricingStrategy.calculatePrice(days, carType.name());
+        //Check availability logic can be added here
+        //Add logic to calculate price based on pricing strategy and make payment.
         // You can add price to reservation if needed
         return commandService.createReservation(reservation);
     }
