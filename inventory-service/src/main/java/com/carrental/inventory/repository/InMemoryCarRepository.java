@@ -37,4 +37,15 @@ public class InMemoryCarRepository implements CarRepository {
         cars.put(car.getId(), car);
         return car;
     }
+
+    @Override
+    public List<Car> findByType(com.carrental.inventory.domain.CarType type) {
+        List<Car> result = new ArrayList<>();
+        for (Car car : cars.values()) {
+            if (car.getType() == type) {
+                result.add(car);
+            }
+        }
+        return result;
+    }
 }

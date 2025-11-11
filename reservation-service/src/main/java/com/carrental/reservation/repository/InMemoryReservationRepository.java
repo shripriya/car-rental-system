@@ -37,4 +37,16 @@ public class InMemoryReservationRepository implements ReservationRepository {
         reservations.put(reservation.getId(), reservation);
         return reservation;
     }
+
+    @Override
+    public List<Reservation> findByCarIdAndDateRange(Long carId, java.time.LocalDateTime startDate, java.time.LocalDateTime endDate) {
+        List<Reservation> result = new ArrayList<>();
+        for (Reservation reservation : reservations.values()) {
+            if (reservation.getCarId().equals(carId) &&
+                !(reservation.getEndDate().isBefore(startDate) || reservation.getStartDate().isAfter(endDate))) {
+                result.add(reservation);
+            }
+        }
+        return result;
+    }
 }

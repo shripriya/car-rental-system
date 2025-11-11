@@ -5,7 +5,6 @@ import com.carrental.inventory.domain.CarStatus;
 import com.carrental.inventory.domain.CarType;
 import com.carrental.inventory.repository.InMemoryCarRepository;
 import org.junit.jupiter.api.*;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 

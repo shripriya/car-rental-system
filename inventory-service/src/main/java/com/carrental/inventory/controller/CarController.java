@@ -25,6 +25,11 @@ public class CarController {
         return carService.getCarById(id);
     }
 
+    @GetMapping("/{type}")
+    public List<Car> getCarById(@PathVariable String carType) {
+        return carService.getCarByType(carType);
+    }
+
     @PostMapping
     public Car createCar(@RequestBody Car car) {
         return carService.addCar(car.getType(), car.getLicensePlate());

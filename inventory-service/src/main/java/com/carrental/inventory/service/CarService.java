@@ -33,4 +33,8 @@ public class CarService {
         return carRepository.findAll().stream()
             .anyMatch(car -> car.getType() == type && car.getStatus() == com.carrental.inventory.domain.CarStatus.AVAILABLE);
     }
+    public List<Car> getCarByType(String carType) {
+        CarType type = CarType.valueOf(carType.toUpperCase());
+        return carRepository.findByType(type);
+    }
 }
