@@ -1,7 +1,5 @@
 package com.carrental.inventory.domain;
 
-import com.carrental.inventory.domain.CarStatus;
-import com.carrental.inventory.domain.CarType;
 public class Car {
     private Long id;
     private CarType type; // SEDAN, SUV, VAN
