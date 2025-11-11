@@ -32,7 +32,7 @@ Each service is independently deployable and communicates via REST APIs. The pro
 - **How**: Defines a family of pricing algorithms, encapsulates each one, and makes them interchangeable. The reservation service can use different pricing strategies without modifying its code.
 
 ### 4. Command Query Responsibility Segregation (CQRS)
-- **Where**: `service/ReservationCommandService.java` and `service/ReservationQueryService.java` in Reservation Service
+- **Where**: `service/ReservationCommandService.java` and `service/AvailabilityQueryService.java` in Reservation Service
 - **How**: Separates write operations (commands) from read operations (queries), improving scalability and maintainability.
 
 ## How to Build and Run
