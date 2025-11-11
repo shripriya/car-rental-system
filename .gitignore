@@ -1,0 +1,42 @@
+# Maven build output
+/target/
+**/target/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA files
+*.iml
+.idea/
+
+# VS Code files
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Maven local repository
+.mvn/
+
+# Ignore build artifacts
+*.jar
+*.war
+*.ear
+
+# Ignore generated files
+*.class
+
+# Ignore test reports
+surefire-reports/
+
+# Ignore dependency directories
+node_modules/
+
+# Ignore environment files
+.env
