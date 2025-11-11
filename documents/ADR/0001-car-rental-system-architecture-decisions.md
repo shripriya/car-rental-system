@@ -65,9 +65,9 @@ Java 17, Spring Boot 3.1, Spring Cloud
 
 ![Car Rental System - Requirements](/documents/ADR/images/Requirements.png)
 
-![Class Diagram](/documents/ADR/images/UML-class.jpg)
+![Class Diagram](/documents/ADR/images/UML-Class.jpg)
 
-![Sequence Diagram](/documents/ADR/images/UML-sequence.jpg)
+![Sequence Diagram](/documents/ADR/images/UML-Sequence.jpg)
 
 ![ER Diagram](/documents/ADR/images/ER.jpg)
 
